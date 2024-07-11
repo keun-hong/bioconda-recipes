@@ -1,0 +1,51 @@
+{% set version = "0.9.1" %}
+
+package:
+  name: "gencube"
+  version: "{{ version }}"
+
+source:
+  url: https://files.pythonhosted.org/packages/13/af/3d1d8c464a73057afe1835e9b7294c971f71e0959a076203e8cca1205830/gencube-{{ version }}.tar.gz
+  sha256: d3a6d09f97f100cf7cc9b6b37f1cd6697d1e0f9d5daed457326c261aab82307b
+
+build:
+  noarch: python
+  number: 0
+
+requirements:
+  host:
+    - python >=3.6
+    - pip
+  run:
+    - python >=3.6
+    - biopython >=1.79
+    - pandas >=1.0.0
+    - numpy >=1.21.0,<2
+    - requests >=2.25.1
+    - urllib3 >=1.26.5
+    - xmltodict >=0.12.0
+    - beautifulsoup4 >=4.9.3
+    - tqdm >=4.61.2
+    - tabulate >=0.8.9
+
+about:
+  home: "https://keun-hong.github.io/"
+  license: "MIT"
+  license_file: "LICENSE"
+  summary: "GenCube enables researchers to search for, download, and unify genome assemblies and diverse types of annotations, and retrieve metadata for sequencing-based experimental data suitable for specific requirements."
+  description: |
+    GenCube enables researchers to search for, download, and unify genome assemblies and diverse types of annotations, and retrieve metadata for sequencing-based experimental data suitable for specific requirements.
+  dev_url: "https://github.com/snu-cdrc/gencube"
+  doc_url: "https://github.com/snu-cdrc/gencube"
+  doc_source_url: "https://github.com/snu-cdrc/gencube"
+  license_family: "MIT"
+  license_file: "LICENSE"
+
+extra:
+  recipe-maintainers:
+    - "keunhongson"
+  identifiers:
+    - biotools:gencube
+  edam:
+    topic: Data_Handling
+    operation: Data_Handling
